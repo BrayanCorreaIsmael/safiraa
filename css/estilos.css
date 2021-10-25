@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* 
+    scroll-behavior especifica el comportamiento del desplazamiento para un elemento con desplazamiento, cuando éste se produce debido a la navegación o a APIs CSSOM. Otros desplazamientos, p.ej. aquellos realizados por el usuario, no se ven afectados por esta propiedad. Cuando esta propiedad está especificada en el elemento raíz, se aplica al viewport. 
+    smooth
+    La caja se desplaza suavemente, utilizando una función de tiempo definida por el agente de usuario (user-agent) sobre un período de tiempo también definido por éste. Los agentes de usuario seguirán las convenciones de su propia plataforma, en caso de que existan.
+    */
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    /* La propiedad CSS overflow  especifica: si recortar contenido, dibujar barras de desplazamiento o mostrar el contenido excedente en un elemento a nivel de bloque.
+    hidden
+    El contenido es recortado y no se muestran barras de posición.   */
+    margin: auto;
+    padding: 60px 0;
+}
+
+header {
+    height: 100vh;
+    background-image: url(../img/Blog_Banner_052521-min.png);
+    /* 
+    background-repeat define como se repiten los fondos del documento. Un fondo de imagen puede ser repetido sobre el eje horizontal, el eje vertical, ambos ejes, o no estar repetido. 
+    La imagen no se repite (y por lo tanto el area coloreada de la imagen de fondo no debe ser rellenadacompletamente). La posición del fondo no repetido ies definida por la propiedad de CSSbackground-position.
+    */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* 
+    background-attachment determina si la posición de la imagen de fondo será fija dentro de la pantalla o se desplazará con su bloque contenedor. 
+    fixed es especificado, la imagen de fondo estará fija en la pantalla y no se moverá con el bloque contenedor.*/
+    background-attachment: fixed;
+    /* 
+    background-position define la posición inicial de la imagen de fondo especificada
+    */
+    background-position: center;
+}
+
+.h1{
+    background-color: #fff;
+}
+.copy{
+    background-color: #fff;
+}
+.head {
+    padding: 0; 
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(8, 2, 2);
+}
+
+
+.hamburger {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+}
+
+
+.menu-navegacion {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30vw;
+    height: 100%;
+    background-image: linear-gradient(-225deg, #7742B2 0%, #F180FF 52%, #FD8BD9 100%);
+    display: flex;
+    flex-direction: column;
+    /* 
+    justify-content define cómo el navegador distribuye el espacio entre y alrededor de los items flex, a lo largo del eje principal de su contenedor. 
+    {----space-evenly--}
+    los elementos se distribuyen de modo que el espacio entre dos sujetos de alineación adyacentes, antes del primer sujeto de alineación y después del último sujeto de alineación sea el mismo
+    */
+    justify-content: space-evenly;
+    align-items: center;
+    transition: transform .3s ease-in-out;
+    /*
+    el menu esta pero al 110% de la pagina es decir que no estan el pagina pa 
+    */
+    /* 
+    transform te permite modificar el espacio de coordenadas del modelo de formato visual CSS. Usándola, los elementos pueden ser trasladados, rotados, escalados o sesgados de acuerdo a los valores establecidos 
+    translate: Especifica una tanslación 2D dada por el vector [tx, ty]. Si ty no es específicada, se asumirá que su valor es cero.
+    */
+    transform: translate(110%);
+    box-shadow:  0 0 0 6px rgba(0, 0, 0, 0.5);
+     
+}
+
+.spread {
+    transform: translate(0);
+}
+
+.menu-navegacion a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.titulo {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.copy {
+    font-weight: 300;
+    font-size: 25px;
+}
+
+
+/* Nuestro servicio */
+
+
+.subtitulo{
+    text-align: center;
+    font-weight: 300;
+    color:#8bf0fd;
+    margin-bottom: 40px;
+    font-size: 40px;
+}
+
+
+.contenedor-servicio{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* 
+    flex-wrap de CSS  especifica si los elementos "hijos" son obligados a permanecer en una misma línea o pueden fluir en varias líneas. Si la cobertura (wrap) está permitida, esta propiedad también te permite controlar la dirección en la cual serán apilados los elementos.
+    {-- Los elementos flex son colocados en varias líneas. --}
+    */
+    flex-wrap: wrap;
+}
+
+.contenedor-servicio img{
+    width: 40%;
+}
+
+.checklist-servicio {
+    width: 45%;
+}
+
+.service {
+    margin-bottom: 20px;
+}
+
+.n-service {
+    margin-bottom: 7px;
+    color: #8bf0fd;
+}
+
+.number {
+    display: inline-block;
+    background-image: linear-gradient(-225deg, #7742B2 0%, #F180FF 52%, #FD8BD9 100%);
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 700;
+    /* 
+    line-height: establece la altura de una casilla remarcada por líneas. Comúnmente se usa para establecer la distancia entre líneas de texto.    
+    */
+    line-height: 30px;
+    margin-right: 5px;
+}
+
+
+.gallery {
+    background: #f2f2f2;
+}
+
+.contenedor-gallery{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+
+.img-galeria{
+    width: 30%;
+    display: block;
+    margin-bottom: 15px;
+    box-shadow: 0 0 6px rgba(0,0, 0, .5);
+    cursor: pointer;
+}
+
+
+.imagen-light{
+    position: fixed;
+    background: rgba(0, 0, 0, .6);
+    width: 100%;
+    height: 100%;
+    /* 
+    top: especifica parte de la posición de un elemento posicionado. No tiene efecto en elementos no posicionados.
+    Para los elementos con una posición absoluta (aquellos que tienen la propiedad position: absolute o position: fixed), determina la distancia entre el borde superior del elemento y el borde superior del bloque que lo contiene.
+    */
+    top: 0;
+    /* 
+    left: especifica parte de la posición de un elemento (posicionado - es decir, con una posición determinada por código).
+    Para los elementos con una posición absoluta (aquellos que tienen la propiedad position: absolute ó position: fixed), la propiedad left determina la distancia entre el margen izquierdo del elemento y el borde izquierdo de su bloque contenedor.
+    */
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(100%);
+    transition: transform .2s ease-in-out;
+}
+
+
+.show{
+    transform: translate(0);
+}
+
+.agregar-imagen{
+    width: 60%;
+    border-radius: 10px;
+    transform: scale(0);
+    transition: transform .3s .2s;
+}
+
+.close{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.showImage{
+    transform: scale(1);
+}
+
+
+.experts{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cont-expert{
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cont-expert img{
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+.n-expert{
+    display: inline-block;
+    margin-top: 20px;
+    width: 100%;
+    font-weight: 400;
+}
+
+
+
+/*  Footer */
+
+
+footer{
+    background:#f98bfd;
+    padding-bottom: 0.1px;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.contact-us{
+    width: 40%;
+    color: #fff;
+}
+
+.brand{
+    font-weight: 500;
+    font-size: 40px;
+}
+
+
+.brand+p{
+    font-weight: 500;
+}
+
+.social-media{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.social-media-icon{
+    display: inline-block;
+    margin-left: 20px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+}
+
+.social-media-icon:hover{
+    background:#fff;
+    color: #764ba2;
+}
+
+.social-media-icon i{
+    font-size: 30px;
+    line-height: 60px;
+}
+
+.line{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 2px;
+    background: #fff;
+    margin-bottom: 60px;
+}
